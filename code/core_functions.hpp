@@ -1532,7 +1532,7 @@ void calculateLnGammaResidual(parameters& param, calculation& _calculation, std:
                 bool iIsReferenceStateIndex = false;
                 for (int p = 0; p < _calculation.referenceStateCalculationIndices.size(); p++) {
                     for (int q = 0; q < int(_calculation.components.size() - 1); q++) {
-                        if (_calculation.referenceStateCalculationIndices[p][q] == i) {
+                        if (_calculation.actualConcentrationIndices[_calculation.referenceStateCalculationIndices[p][q]] == i) {
                             iIsReferenceStateIndex = true;
                             break;
                         }
